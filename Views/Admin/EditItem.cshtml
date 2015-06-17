@@ -1,0 +1,43 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/Admin/_layout1.cshtml";
+}
+<title>Information</title>
+
+<div class="col-md-5" style="margin-left:30%">
+    <div class="jumbotron" align="center">
+      
+        @using (Html.BeginForm("edit", "Admin", FormMethod.Post))
+        {
+            var s = ViewBag.x;
+            <img src="@s.Image_path" height="300" width="350" />
+           <br />
+       
+            
+            <label>Model</label>
+             <input name="Id" type="text" value="@s.Id" hidden="hidden"/><br /><br />
+            <input name="Model" type="text" value="@s.Model"/><br /><br />
+            
+            <label>Category</label>
+            <input name="Category" type="text" value="@s.Category"/><br /><br />
+            <label>Price</label>
+            <input name="Price" type="text" value="@s.Price"/><br /><br />
+            <label>Ram</label>
+            <input name="Ram" type="text" value="@s.Ram"/><br /><br />
+            <label>HD</label>
+            <input name="HD" type="text" value="@s.HD"/><br /><br />
+            <label>Status</label>
+            <input name="Status" type="text" value="@s.Status"/><br /><br />
+            
+            
+            <button type="submit" id="b1"><i class="icon-hand-right"></i> Edit</button>
+        }
+        
+
+    </div>
+
+</div>
+
+</body>
+</html>

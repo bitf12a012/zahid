@@ -1,0 +1,45 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/Admin/_layout1.cshtml";
+
+}
+
+
+
+
+
+
+
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Category', 'user'],
+              ['Dell', @ViewBag.d], ['HP', @ViewBag.h]
+             
+            ]);
+
+            var options = {
+                title: 'Viewing Data',
+                legend: 'none',
+                pieSliceText: 'label',
+                slices: {
+                    1: { offset: 0.2 },
+                    2: { offset: 0.3 },
+                   
+                },
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿@model Project.Models.User
+@{
+    Layout = "~/Views/Shared/Admin/_Layout.cshtml";
+}
+
+<title>Sign Up</title>
+<div id="signupbox" style="display:normal; margin-top:150px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Sign Up</div>
+            <div style="float:right; font-size: 85%; position: relative; top:-10px"></div>
+        </div>
+        <div class="panel-body">
+
+
+
+            @using (Html.BeginForm("save", "Admin", FormMethod.Post))
+            {
+                @Html.TextBoxFor(model => model.Email, new { placeholder = "Email", type = "email" ,id="t1"})<br /><br />
+                @Html.TextBoxFor(model => model.F_Name, new { placeholder = "First Name", type = "text" })<br /><br />
+                @Html.TextBoxFor(model => model.L_Name, new { placeholder = "Last Name", type = "text" })<br /><br />
+                @Html.TextBoxFor(model => model.Passward, new { placeholder = "Passward", type = "text" })<br /><br />
+
+                <button type="submit" id="b1"><i class="icon-hand-right"></i> Sign Up</button>
+            }
+            <!--</form>-->
+        </div><!--/login form-->
+    </div>
+
+
+
+    @* <form id="signupform" class="form-horizontal" role="form" method="post" action="/SignUP/save">
+
+
+            <div class="form-group;">
+                <label for="email" class="col-md-3 control-label">Email</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" name="Email" placeholder="Email Address">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="firstname" class="col-md-3 control-label">First Name</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" name="F_Name" placeholder="First Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" name="L_Name" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-md-3 control-label">Password</label>
+                <div class="col-md-9">
+                    <input type="password" class="form-control" name="Passward" placeholder="Password">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <!-- Button -->
+                <div class="col-md-offset-3 col-md-9">
+                    <button type="submit" ><i class="icon-hand-right"></i> Sign Up</button>
+
+                </div>
+            </div>
+
+
+
+
+
+        </form>*@
+</div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>

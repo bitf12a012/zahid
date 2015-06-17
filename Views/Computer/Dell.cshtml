@@ -1,0 +1,28 @@
+﻿@model List<Project.Models.Datum>
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<title>DeLL</title>
+<div class="jumbotron container">
+    @foreach (var s in Model)
+    {
+        <div class="col-md-2">
+            <a href="/Computer/DInfo/@s.Id">
+                <img src="@s.Image_path" height="70" width="70" />
+                <p>@s.Model<br />@s.Price<br />@s.Id</p>
+
+            </a>
+        </div>
+    }
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@model Project.Models.Datum
+@{
+    Layout = "~/Views/Shared/Admin/_layout1.cshtml";
+
+}
+<title>Admin</title>
+<div id="signupbox" style="display:normal; margin-top:40px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Add Records</div>
+            <div style="float:right; font-size: 85%; position: relative; top:-10px"></div>
+        </div>
+        <div class="panel-body">
+
+
+
+            <form action="/Admin/fileupload" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" />
+                <input type="submit" value="upload" /><br /><br />
+            </form>
+            @using (Html.BeginForm("saved", "Admin", FormMethod.Post))
+            {
+                @Html.TextBoxFor(model => model.Model, new { placeholder = "Model", type = "text" })<br /><br />
+                @Html.TextBoxFor(model => model.Category, new { placeholder = "Category", type = "text" })<br /><br />
+                @Html.TextBoxFor(model => model.Price, new { placeholder = "Price", type = "text" })<br /><br />
+                @Html.TextBoxFor(model => model.Ram, new { placeholder = "Ram", type = "text" })<br /><br />
+                @Html.TextBoxFor(model => model.HD, new { placeholder = "Hard Disk", type = "text" })<br /><br />
+                @Html.TextBoxFor(model => model.Status, new { placeholder = "Status", type = "text" })<br /><br />
+               
+                <button type="submit"><i class="icon-hand-right"></i> Save</button>
+            }
+
+        </div>
+    </div>
+
+
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@model Project.Models.Datum
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>Information</title>
+
+<div class="col-md-5" style="margin-left:30%">
+    <div class="jumbotron" align="center">
+        <img src="@Model.Image_path" height="300" width="300" />
+        <p>Model:@Model.Model<br />Price:@Model.Price<br />Raml:@Model.Ram<br />HardDisk:@Model.HD<br />Status:@Model.Status</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

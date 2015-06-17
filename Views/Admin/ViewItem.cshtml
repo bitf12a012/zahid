@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/Admin/_layout1.cshtml";
+}
+
+
+<title>DeLL</title>
+
+<div class="jumbotron container">
+
+    @foreach (var s in ViewBag.x)
+    {
+        <div class=" col-lg-3">
+            <a href="/Computer/DInfo/@s.Id">
+                <img src="@s.Image_path" height="70" width="70" />
+                <p>@s.Model<br />@s.Price<br />@s.Id</p>
+            </a>
+            <div class="col-lg-1; bg-danger">
+                <a href="/Admin/EditItem/@s.Id">Edit</a>
+                <a href="/Admin/DeleteItem/@s.Id">Delete</a>
+            </div>
+        </div>
+
+    }
+
+
+</div>
+
+    </body>
+    </html>

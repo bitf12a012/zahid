@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = "~/Views/Shared/Admin/_layout1.cshtml";
+
+}
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Over view
+                </h1>
+              
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Page</th>
+                                <th>Visits</th>
+                                <th>Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var s in ViewBag.p) { 
+                            <tr>
+                                
+                                <td>@s.pages</td>
+                                <td>@s.visits</td>
+                                <td>@s.revenue</td>
+                                
+                                
+                            </tr>
+                            }
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+    </div>
+</body>
+</html>
